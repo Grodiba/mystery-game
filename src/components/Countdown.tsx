@@ -18,11 +18,11 @@ export function Countdown() {
   const pad = (n: number) => String(n).padStart(2, "0");
 
   return (
-    <div className="text-center mt-4">
-      <p className="text-xs text-green-600 uppercase tracking-widest mb-1">
+    <div style={{ textAlign: "center", marginTop: 14 }}>
+      <p style={{ color: "var(--c-text-dim)", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: 4 }}>
         แฟ้มใหม่เปิดอีก
       </p>
-      <p className="text-2xl font-mono text-green-400 tabular-nums">
+      <p style={{ fontSize: 22, fontFamily: "monospace", color: "var(--c-amber)", letterSpacing: "0.05em", fontVariantNumeric: "tabular-nums" }}>
         {pad(h)}:{pad(m)}:{pad(s)}
       </p>
     </div>

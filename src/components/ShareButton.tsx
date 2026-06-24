@@ -50,7 +50,7 @@ ${squares}${emptySquares}
   return (
     <button
       onClick={handleShare}
-      className="mt-4 w-full py-3 px-6 border border-green-500 text-green-400 font-mono text-sm uppercase tracking-widest hover:bg-green-500 hover:text-black transition-colors duration-200"
+      style={{ marginTop: 8, width: "100%", padding: "11px", border: "1px solid var(--c-amber)", background: "transparent", color: "var(--c-amber)", fontFamily: "monospace", fontSize: 11, letterSpacing: "0.25em", textTransform: "uppercase", cursor: "pointer" }}
     >
       {copied ? "[ คัดลอกแล้ว! ]" : "[ แชร์ผลลัพธ์ ]"}
     </button>
