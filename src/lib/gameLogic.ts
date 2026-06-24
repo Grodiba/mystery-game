@@ -1,12 +1,30 @@
+export interface ClueAudio {
+  type: "audio";
+  label: string;
+  transcript: string;
+}
+export interface ClueRedacted {
+  type: "redacted";
+  label: string;
+  parts: Array<string | { r: number }>;
+}
+export interface ClueImage {
+  type: "image";
+  label: string;
+  image_url: string;
+  caption: string;
+}
+export type Clue = ClueAudio | ClueRedacted | ClueImage;
+
 export interface Puzzle {
   date: string;
   id: string;
-  subject_label: string;
-  image_url: string;
-  question: string;
+  case_name: string;
+  description: string;
+  clue_1: Clue;
+  clue_2: Clue;
+  clue_3: Clue;
   answers: string[];
-  hint_1: string;
-  hint_2: string;
   reveal_text: string;
 }
 

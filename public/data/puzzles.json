@@ -1,79 +1,170 @@
 [
   {
     "date": "2026-06-24",
-    "id": "XENO-042",
-    "subject_label": "DEEP SEA ANOMALY",
-    "image_url": "https://placehold.co/600x400/0a1a0a/1a5c1a?text=CLASSIFIED",
-    "question": "IDENTIFY THE ENTITY",
-    "answers": ["ningen", "นินเง็น", "ninjen"],
-    "hint_1": "Humanoid upper body — found in Antarctic waters. Length: 20–30m.",
-    "hint_2": "Name translates directly to 'human' in Japanese.",
-    "reveal_text": "Ningen (นินเง็น) — สิ่งมีชีวิตลึกลับใต้ทะเลลึก ที่มีรายงานพบครั้งแรกโดยลูกเรือวิจัยญี่ปุ่นในยุค 1990s มีลักษณะครึ่งมนุษย์ครึ่งปลาขนาดยักษ์"
+    "id": "คดี-207-เอ",
+    "case_name": "เสียงในห้อง 207",
+    "description": "พบเทปบันทึกในโรงแรมร้างย่านสาทร เนื้อหา 12 วินาที นักภาษาศาสตร์ระบุว่าผู้พูดเอ่ยถึง 'สถานที่นัดพบ' จงระบุสถานที่นั้น",
+    "clue_1": {
+      "type": "audio",
+      "label": "ไฟล์เสียง 0:12 — สัญญาณรบกวน 80%",
+      "transcript": "...ค่ำนี้...หอ......หน้า.......น้ำ..."
+    },
+    "clue_2": {
+      "type": "redacted",
+      "label": "บันทึกถอดเสียงบางส่วน",
+      "parts": ["'เจอกันที่ ", {"r": 8}, " หน้านาฬิกาใหญ่ ตอนสองทุ่ม'"]
+    },
+    "clue_3": {
+      "type": "image",
+      "label": "ภาพถ่ายในกระเป๋าผู้ต้องสงสัย",
+      "image_url": "https://placehold.co/600x300/1a1208/5c3a08?text=IMG+DEGRADED",
+      "caption": "ภาพหอนาฬิกาทรงโคโลเนียล ริมแม่น้ำ ใจกลางเมืองหลวง"
+    },
+    "answers": ["หัวลำโพง", "สถานีหัวลำโพง", "สถานีรถไฟหัวลำโพง", "hua lamphong"],
+    "reveal_text": "สถานที่นัดพบคือ หอนาฬิกาสถานีรถไฟหัวลำโพง ผู้ต้องสงสัยถูกจับกุมในคืนถัดมา ขณะรอผู้ติดต่อใต้หอนาฬิกา"
   },
   {
     "date": "2026-06-25",
-    "id": "XENO-043",
-    "subject_label": "AERIAL ENCOUNTER",
-    "image_url": "https://placehold.co/600x400/0a1a0a/1a5c1a?text=CLASSIFIED",
-    "question": "IDENTIFY THE ENTITY",
-    "answers": ["flatwoods monster", "the flatwoods monster", "braxton county monster"],
-    "hint_1": "Encountered in West Virginia, 1952. Glowing red face, towering form.",
-    "hint_2": "Named after the small town where 6 witnesses reported the sighting.",
-    "reveal_text": "Flatwoods Monster — สิ่งมีชีวิตปริศนาที่ถูกพบในปี 1952 ที่เมือง Flatwoods รัฐเวสต์เวอร์จิเนีย เป็นหนึ่งในเหตุการณ์ที่ถูกบันทึกไว้มากที่สุดในประวัติศาสตร์สหรัฐอเมริกา"
+    "id": "คดี-208-บี",
+    "case_name": "ลายมือที่ไม่มีเจ้าของ",
+    "description": "พบจดหมายไร้นามบนโต๊ะทำงานในห้องสมุดเก่า ตัวหนังสือสไตล์โบราณ อ้างถึงบุคคลในประวัติศาสตร์ไทยคนหนึ่ง จงระบุว่าเขียนถึงใคร",
+    "clue_1": {
+      "type": "audio",
+      "label": "ไฟล์เสียง 0:08 — บทกวีถูกอ่านผ่านสัญญาณรบกวน",
+      "transcript": "...แสงจันทร์...เรือ...รัก...กวี...แม่กลอง..."
+    },
+    "clue_2": {
+      "type": "redacted",
+      "label": "ข้อความในจดหมาย — ชำรุดบางส่วน",
+      "parts": ["'ข้าพเจ้าขอน้อมรำลึกถึง ", {"r": 5}, " กวีเอกแห่งกรุงรัตนโกสินทร์ ผู้แต่งนิราศ ", {"r": 6}, " ไว้เป็นมรดกของแผ่นดิน'"]
+    },
+    "clue_3": {
+      "type": "image",
+      "label": "ภาพวาดฉากหนึ่งที่ถ่ายภาพไว้",
+      "image_url": "https://placehold.co/600x300/1a1208/5c3a08?text=IMG+DEGRADED",
+      "caption": "รูปวาดชายในชุดไทยโบราณ นั่งเขียนหนังสือริมแม่น้ำ มีเรือแล่นผ่านในพื้นหลัง"
+    },
+    "answers": ["สุนทรภู่", "พระสุนทรโวหาร", "ภู่"],
+    "reveal_text": "จดหมายฉบับนั้นเขียนถึง สุนทรภู่ กวีเอกแห่งรัชกาลที่ 2 ผู้แต่งนิราศภูเขาทอง พระอภัยมณี และบทกวีอมตะอีกมากมาย"
   },
   {
     "date": "2026-06-26",
-    "id": "XENO-044",
-    "subject_label": "WINGED ANOMALY",
-    "image_url": "https://placehold.co/600x400/0a1a0a/1a5c1a?text=CLASSIFIED",
-    "question": "IDENTIFY THE ENTITY",
-    "answers": ["mothman", "moth man"],
-    "hint_1": "Large winged creature with glowing red eyes. Speed: ~160 km/h.",
-    "hint_2": "Appeared repeatedly before a bridge collapse in Point Pleasant, 1967.",
-    "reveal_text": "Mothman — สิ่งมีชีวิตลึกลับที่ถูกพบเห็นใน Point Pleasant ก่อนที่สะพาน Silver Bridge จะพังถล่ม กลายเป็นสัญลักษณ์แห่งลางร้ายในวัฒนธรรมป๊อปสมัยใหม่"
+    "id": "คดี-209-ซี",
+    "case_name": "สิ่งที่หายไปในคืนวิหาร",
+    "description": "รายงานลับจากการสืบสวนปี 2319 — มีสิ่งสำคัญหายออกจากวิหารกลางคืน เชื่อกันว่าเป็นหัวใจของราชอาณาจักร จงระบุว่าสิ่งนั้นคืออะไร",
+    "clue_1": {
+      "type": "audio",
+      "label": "ไฟล์เสียง 0:09 — บันทึกปากคำพยาน",
+      "transcript": "...เขียว...แสงวาบ...หยกแท้...พระ..."
+    },
+    "clue_2": {
+      "type": "redacted",
+      "label": "รายงานสืบสวนที่ถูก redact บางส่วน",
+      "parts": ["'วัตถุสูญหาย: ", {"r": 10}, " ทรงสามเหลี่ยม สีเขียวมรกต ขนาดประมาณสามนิ้ว สัญลักษณ์แห่ง ", {"r": 4}, " ของสยาม'"]
+    },
+    "clue_3": {
+      "type": "image",
+      "label": "ภาพสเก็ตช์จากพยาน",
+      "image_url": "https://placehold.co/600x300/1a1208/5c3a08?text=IMG+DEGRADED",
+      "caption": "ภาพสเก็ตช์วัตถุทรงสามเหลี่ยม เนื้อหยกสีเขียวเข้ม ประทับรัศมีรอบองค์"
+    },
+    "answers": ["พระแก้วมรกต", "พระพุทธมหามณีรัตนปฏิมากร", "แก้วมรกต", "emerald buddha"],
+    "reveal_text": "สิ่งที่หายไปคือ พระแก้วมรกต พระพุทธรูปคู่บ้านคู่เมืองของไทย ถูกอัญเชิญมาประดิษฐาน ณ วัดพระแก้ว กรุงเทพฯ ในปี 2327"
   },
   {
     "date": "2026-06-27",
-    "id": "XENO-045",
-    "subject_label": "HIGH-ALTITUDE SUBJECT",
-    "image_url": "https://placehold.co/600x400/0a1a0a/1a5c1a?text=CLASSIFIED",
-    "question": "IDENTIFY THE ENTITY",
-    "answers": ["yeti", "abominable snowman", "the yeti"],
-    "hint_1": "Bipedal. Estimated height 2.5–3m. Footprint size: 33×45cm. Himalayan region.",
-    "hint_2": "Sherpa name for this entity. Four letters. Translates to 'rock bear' or 'wild man'.",
-    "reveal_text": "Yeti (เยติ) — สิ่งมีชีวิตลึกลับที่ถูกกล่าวถึงในตำนานชาวเชอร์ปาและทิเบตมาหลายศตวรรษ รายงานการพบเห็นจำนวนมากในศตวรรษที่ 20"
+    "id": "คดี-210-ดี",
+    "case_name": "ผู้หญิงที่ไม่ยอมตาย",
+    "description": "รายงานกรณีผิดปกติจากชุมชนพระโขนง กรุงเทพฯ ช่วงปลายศตวรรษที่ 19 — ชาวบ้านงดผ่านถนนสายหนึ่งหลังเที่ยงคืน เชื่อกันว่าเพราะ 'เธอ' ยังอยู่ที่นั่น จงระบุว่าเธอคือใคร",
+    "clue_1": {
+      "type": "audio",
+      "label": "ไฟล์เสียง 0:11 — บันทึกที่พบในวัดเก่า สัญญาณรบกวน 65%",
+      "transcript": "...ทารก...รัก...ไม่ยอม...ไป...ท้อง..."
+    },
+    "clue_2": {
+      "type": "redacted",
+      "label": "เอกสารบันทึกชุมชน — ถูกลบบางส่วน",
+      "parts": ["'", {"r": 5}, " เสียชีวิตขณะคลอดบุตร แต่ยังคงปรากฏตัวในบริเวณ ", {"r": 8}, " ทุกคืน เธอยังไม่ยอมทิ้งลูกน้อยไว้'"]
+    },
+    "clue_3": {
+      "type": "image",
+      "label": "ภาพวาดที่ชาวบ้านบอกว่า 'เห็นเอง'",
+      "image_url": "https://placehold.co/600x300/1a1208/5c3a08?text=IMG+DEGRADED",
+      "caption": "ภาพหญิงในชุดผ้าถุงโบราณ อุ้มทารก ยืนริมแม่น้ำในยามค่ำคืน"
+    },
+    "answers": ["แม่นาค", "แม่นาคพระโขนง", "นางนาค", "mae nak"],
+    "reveal_text": "เธอคือ แม่นาคพระโขนง ตำนานผีไทยที่โด่งดังที่สุด เชื่อกันว่าเสียชีวิตขณะคลอดบุตร แต่รักสามีมากเกินกว่าจะจากไป กลายเป็นวัฒนธรรมป๊อปและภาพยนตร์ไทยมาหลายสิบเรื่อง"
   },
   {
     "date": "2026-06-28",
-    "id": "XENO-046",
-    "subject_label": "AQUATIC UNKNOWN",
-    "image_url": "https://placehold.co/600x400/0a1a0a/1a5c1a?text=CLASSIFIED",
-    "question": "IDENTIFY THE ENTITY",
-    "answers": ["nessie", "loch ness monster", "nessy", "the loch ness monster"],
-    "hint_1": "First reported 1933. Estimated length: 9–15m. Plesiosaur-like profile.",
-    "hint_2": "Sighted in a lake in Scotland. The creature's nickname comes from the lake's name.",
-    "reveal_text": "Nessie / Loch Ness Monster — สิ่งลึกลับในทะเลสาบ Loch Ness สกอตแลนด์ กลายเป็นปริศนาที่โด่งดังที่สุดในโลกตั้งแต่ปี 1933"
+    "id": "คดี-211-อี",
+    "case_name": "สัญญาณจากยอดเขา",
+    "description": "สัญญาณวิทยุผิดปกติถูกรับได้จากจุดสูงที่สุดของประเทศ อุปกรณ์บันทึกตรวจพบระดับความสูง 2,565 เมตร จงระบุว่านั่นคือที่ใด",
+    "clue_1": {
+      "type": "audio",
+      "label": "ไฟล์เสียง 0:14 — สัญญาณจากพิกัดลับ",
+      "transcript": "...หนาว...เมฆ...ดอย...เชียงใหม่...ใต้หมอก..."
+    },
+    "clue_2": {
+      "type": "redacted",
+      "label": "รายงานพิกัด GPS ที่ถูกซ่อนบางส่วน",
+      "parts": ["'พิกัด: 18°35'N 98°29'E — ยอด", {"r": 9}, " จังหวัดเชียงใหม่ จุดสูงสุดในประเทศไทย มีสถานีตรวจอากาศ ", {"r": 4}, " ตั้งอยู่'"]
+    },
+    "clue_3": {
+      "type": "image",
+      "label": "ภาพถ่ายดาวเทียมพิกัดที่พบสัญญาณ",
+      "image_url": "https://placehold.co/600x300/1a1208/5c3a08?text=IMG+DEGRADED",
+      "caption": "ภาพมุมสูง ป่าสนและทะเลหมอก มีเสาวัดอากาศปรากฏที่ยอด"
+    },
+    "answers": ["ดอยอินทนนท์", "อินทนนท์", "doi inthanon"],
+    "reveal_text": "สัญญาณมาจาก ดอยอินทนนท์ ยอดเขาสูงสุดในประเทศไทย ตั้งอยู่ในจังหวัดเชียงใหม่ ความสูง 2,565 เมตรเหนือระดับน้ำทะเล"
   },
   {
     "date": "2026-06-29",
-    "id": "XENO-047",
-    "subject_label": "FOREST GIANT",
-    "image_url": "https://placehold.co/600x400/0a1a0a/1a5c1a?text=CLASSIFIED",
-    "question": "IDENTIFY THE ENTITY",
-    "answers": ["bigfoot", "sasquatch", "big foot"],
-    "hint_1": "Pacific Northwest, USA. Bipedal. Footprint: 41cm. Dense fur coverage.",
-    "hint_2": "Name derived from the primary physical evidence left at sighting locations.",
-    "reveal_text": "Bigfoot / Sasquatch — สิ่งมีชีวิตลึกลับที่ถูกกล่าวถึงมากที่สุดในอเมริกาเหนือ ภาพยนตร์ Patterson-Gimlin ปี 1967 ยังคงเป็นหลักฐานที่ถกเถียงมากที่สุดจนถึงทุกวันนี้"
+    "id": "คดี-212-เอฟ",
+    "case_name": "วันที่เงินหายไป",
+    "description": "บันทึกลับจากนักวิเคราะห์การเงินที่หายตัวไปในปี 2540 — เอกสารบอกว่ามีเหตุการณ์หนึ่งทำให้ค่าเงินบาทพังทลายในชั่วข้ามคืน จงระบุชื่อเหตุการณ์นั้น",
+    "clue_1": {
+      "type": "audio",
+      "label": "ไฟล์เสียง 0:07 — บันทึกเสียงห้องประชุมลับ",
+      "transcript": "...ลอยตัว...ดอลลาร์...ไอเอ็มเอฟ...บาท..."
+    },
+    "clue_2": {
+      "type": "redacted",
+      "label": "อีเมลภายในที่รั่วไหล",
+      "parts": ["'2 กรกฎาคม 2540 — ธนาคารแห่งประเทศไทยประกาศ", {"r": 12}, " ค่าเงินบาทร่วงทันที 15% นี่คือจุดเริ่มต้นของ ", {"r": 10}, "'"]
+    },
+    "clue_3": {
+      "type": "image",
+      "label": "ภาพหน้าหนังสือพิมพ์ที่ถ่ายไว้",
+      "image_url": "https://placehold.co/600x300/1a1208/5c3a08?text=IMG+DEGRADED",
+      "caption": "หน้าหนังสือพิมพ์เก่า พาดหัวใหญ่ ตัวเลขกราฟร่วง นักธุรกิจถือหัว"
+    },
+    "answers": ["วิกฤตต้มยำกุ้ง", "ต้มยำกุ้ง", "วิกฤตเศรษฐกิจ 2540", "วิกฤตการณ์ทางการเงิน", "asian financial crisis"],
+    "reveal_text": "เหตุการณ์นั้นคือ วิกฤตต้มยำกุ้ง (Tom Yum Kung Crisis) ปี 2540 — วิกฤตการณ์ทางการเงินที่เริ่มต้นจากไทยและลามไปทั่วเอเชีย ส่งผลให้ค่าเงินบาทลดลงกว่า 50%"
   },
   {
     "date": "2026-06-30",
-    "id": "XENO-048",
-    "subject_label": "BLOOD DRAIN INCIDENT",
-    "image_url": "https://placehold.co/600x400/0a1a0a/1a5c1a?text=CLASSIFIED",
-    "question": "IDENTIFY THE ENTITY",
-    "answers": ["chupacabra", "el chupacabra", "chupacabras"],
-    "hint_1": "Livestock drained of blood. No lacerations. Only puncture wounds at the neck.",
-    "hint_2": "Spanish name. 'Chupar' = to suck. 'Cabra' = goat.",
-    "reveal_text": "Chupacabra (ชูปากาบรา) — สิ่งมีชีวิตลึกลับที่ชื่อแปลว่า 'ผู้ดูดเลือดแพะ' ปรากฏครั้งแรกในปี 1995 ที่เปอร์โตริโก"
+    "id": "คดี-213-จี",
+    "case_name": "วิหารที่ส่องแสงสู่แม่น้ำ",
+    "description": "ภาพถ่ายเก่าจากต้นศตวรรษที่ 20 — ผู้สืบสวนพบว่าสถานที่ในภาพยังคงตั้งอยู่ ริมแม่น้ำเจ้าพระยา โดดเด่นด้วยปรางค์หลักที่สูงตระหง่าน จงระบุชื่อสถานที่",
+    "clue_1": {
+      "type": "audio",
+      "label": "ไฟล์เสียง 0:10 — บทสวดที่ได้ยินจากน้ำ",
+      "transcript": "...แม่น้ำ...รุ่งอรุณ...ปรางค์...ทอง...ฝั่งธน..."
+    },
+    "clue_2": {
+      "type": "redacted",
+      "label": "คำบอกเล่าจากชาวต่างชาติในศตวรรษที่ 19",
+      "parts": ["'วัดแห่งนี้งดงามที่สุดในพระนคร ตั้งอยู่ฝั่ง", {"r": 4}, " ของแม่น้ำเจ้าพระยา ปรางค์สูงราว 70 เมตร ปะการังและเปลือกหอยประดับทั่ว ", {"r": 6}, "'"]
+    },
+    "clue_3": {
+      "type": "image",
+      "label": "ภาพถ่ายเก่าขาวดำจากเรือกลไฟ",
+      "image_url": "https://placehold.co/600x300/1a1208/5c3a08?text=IMG+DEGRADED",
+      "caption": "ปรางค์สูงตระหง่านริมแม่น้ำ ยอดแหลมสะท้อนแสงยามรุ่งอรุณ"
+    },
+    "answers": ["วัดอรุณ", "วัดอรุณราชวราราม", "วัดอรุณราชวรารามราชวรมหาวิหาร", "wat arun", "temple of dawn"],
+    "reveal_text": "สถานที่นั้นคือ วัดอรุณราชวราราม หรือ 'วัดอรุณ' ตั้งอยู่ฝั่งธนบุรีริมแม่น้ำเจ้าพระยา ปรางค์ประธานสูง 70 เมตร เป็นสัญลักษณ์ที่โด่งดังที่สุดของกรุงเทพมหานคร"
   }
 ]

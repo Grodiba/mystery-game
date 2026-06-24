@@ -61,3 +61,20 @@ body {
 .animate-shake {
   animation: shake 0.4s ease-in-out;
 }
+
+/* Audio waveform bar animation */
+@keyframes wavebar {
+  0% { transform: scaleY(0.3); }
+  100% { transform: scaleY(1); }
+}
+
+/* Stamp blink on game over */
+@keyframes stampin {
+  0% { opacity: 0; transform: scale(1.4) rotate(-3deg); }
+  60% { opacity: 1; transform: scale(0.95) rotate(-3deg); }
+  100% { opacity: 1; transform: scale(1) rotate(-3deg); }
+}
+
+.stamp-animate {
+  animation: stampin 0.35s ease-out forwards;
+}

@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { getNextMidnightMs } from "@/lib/gameLogic";
-import { Lang, strings } from "@/lib/i18n";
+import { Lang } from "@/lib/i18n";
 
 export function Countdown({ lang }: { lang: Lang }) {
   const [ms, setMs] = useState(getNextMidnightMs());
-  const s = strings[lang];
 
   useEffect(() => {
     const id = setInterval(() => setMs(getNextMidnightMs()), 1000);
@@ -18,12 +17,33 @@ export function Countdown({ lang }: { lang: Lang }) {
   const sec = Math.floor((ms % 60000) / 1000);
   const pad = (n: number) => String(n).padStart(2, "0");
 
+  const label = lang === "th"
+    ? "แฟ้มใหม่จะปลดล็อกอีกครั้งเวลา 00:00 น."
+    : "New case unlocks at midnight";
+
   return (
-    <div style={{ textAlign: "center", marginTop: 14 }}>
-      <p style={{ color: "var(--c-text-dim)", fontSize: 9, letterSpacing: "0.25em", textTransform: "uppercase", marginBottom: 4 }}>
-        {s.nextCase}
+    <div style={{
+      borderTop: "1px dashed var(--c-border)",
+      paddingTop: 16,
+      textAlign: "center",
+    }}>
+      <p style={{
+        color: "var(--c-text-dim)",
+        fontSize: 10,
+        letterSpacing: "0.15em",
+        fontFamily: "monospace",
+        margin: "0 0 6px",
+      }}>
+        {label}
       </p>
-      <p style={{ fontSize: 22, fontFamily: "monospace", color: "var(--c-amber)", letterSpacing: "0.05em", fontVariantNumeric: "tabular-nums" }}>
+      <p style={{
+        fontSize: 20,
+        fontFamily: "monospace",
+        color: "var(--c-amber)",
+        letterSpacing: "0.1em",
+        fontVariantNumeric: "tabular-nums",
+        margin: 0,
+      }}>
         {pad(h)}:{pad(m)}:{pad(sec)}
       </p>
     </div>
