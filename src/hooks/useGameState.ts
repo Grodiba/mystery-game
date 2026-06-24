@@ -26,12 +26,15 @@ export interface Stats {
   totalWon: number;
 }
 
-const STORAGE_KEY = "mystery_day_state";
 const STATS_KEY = "mystery_stats";
 
-function loadDayState(): DayState | null {
+function dayStateKey(date: string) {
+  return `mystery_state_${date}`;
+}
+
+function loadDayState(date: string): DayState | null {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(dayStateKey(date));
     if (!raw) return null;
     return JSON.parse(raw) as DayState;
   } catch {
@@ -40,7 +43,7 @@ function loadDayState(): DayState | null {
 }
 
 function saveDayState(state: DayState) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  localStorage.setItem(dayStateKey(state.date), JSON.stringify(state));
 }
 
 function loadStats(): Stats {
@@ -57,50 +60,57 @@ function saveStats(stats: Stats) {
   localStorage.setItem(STATS_KEY, JSON.stringify(stats));
 }
 
-export function useGameState() {
+export function useGameState(selectedDate?: string) {
+  const [allPuzzles, setAllPuzzles] = useState<Puzzle[]>([]);
   const [puzzle, setPuzzle] = useState<Puzzle | null>(null);
   const [dayState, setDayState] = useState<DayState | null>(null);
   const [stats, setStats] = useState<Stats>(loadStats());
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const today = getTodayDateString();
+  const targetDate = selectedDate || today;
+
+  // Load all puzzles once
   useEffect(() => {
-    async function init() {
-      try {
-        const today = getTodayDateString();
-        const puzzles = await loadPuzzles();
-        const todayPuzzle = getPuzzleForDate(puzzles, today);
-
-        if (!todayPuzzle) {
-          setError("ไม่พบแฟ้มลับสำหรับวันนี้ — กรุณากลับมาใหม่พรุ่งนี้");
-          setLoading(false);
-          return;
-        }
-
-        setPuzzle(todayPuzzle);
-
-        const saved = loadDayState();
-        if (saved && saved.date === today) {
-          setDayState(saved);
-        } else {
-          const fresh: DayState = {
-            date: today,
-            guesses: [],
-            statuses: [],
-            won: false,
-            lost: false,
-          };
-          setDayState(fresh);
-          saveDayState(fresh);
-        }
-      } catch {
-        setError("เกิดข้อผิดพลาดในการโหลดข้อมูล");
-      } finally {
-        setLoading(false);
-      }
-    }
-    init();
+    loadPuzzles()
+      .then(setAllPuzzles)
+      .catch(() => setError("load_error"));
   }, []);
+
+  // When targetDate or puzzles change, load the right puzzle + day state
+  useEffect(() => {
+    if (allPuzzles.length === 0) return;
+    setLoading(true);
+
+    const found = getPuzzleForDate(allPuzzles, targetDate);
+    if (!found) {
+      setPuzzle(null);
+      setDayState(null);
+      setError("no_case");
+      setLoading(false);
+      return;
+    }
+
+    setPuzzle(found);
+    setError(null);
+
+    const saved = loadDayState(targetDate);
+    if (saved) {
+      setDayState(saved);
+    } else {
+      const fresh: DayState = {
+        date: targetDate,
+        guesses: [],
+        statuses: [],
+        won: false,
+        lost: false,
+      };
+      setDayState(fresh);
+      saveDayState(fresh);
+    }
+    setLoading(false);
+  }, [allPuzzles, targetDate]);
 
   const submitGuess = useCallback(
     (input: string) => {
@@ -126,14 +136,14 @@ export function useGameState() {
       saveDayState(newState);
 
       if (won || lost) {
-        const currentStats = loadStats();
+        const current = loadStats();
         const newStats: Stats = {
-          totalPlayed: currentStats.totalPlayed + 1,
-          totalWon: currentStats.totalWon + (won ? 1 : 0),
-          currentStreak: won ? currentStats.currentStreak + 1 : 0,
+          totalPlayed: current.totalPlayed + 1,
+          totalWon: current.totalWon + (won ? 1 : 0),
+          currentStreak: won ? current.currentStreak + 1 : 0,
           maxStreak: won
-            ? Math.max(currentStats.maxStreak, currentStats.currentStreak + 1)
-            : currentStats.maxStreak,
+            ? Math.max(current.maxStreak, current.currentStreak + 1)
+            : current.maxStreak,
         };
         setStats(newStats);
         saveStats(newStats);
@@ -142,5 +152,5 @@ export function useGameState() {
     [puzzle, dayState]
   );
 
-  return { puzzle, dayState, stats, loading, error, submitGuess };
+  return { puzzle, dayState, stats, loading, error, submitGuess, allPuzzles, today };
 }
